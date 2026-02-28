@@ -12,7 +12,7 @@ alt-tags:
   - stable
 
 modules:
-  - from-file: base.yml
+  - from-file: common.yml
 
   # regenerate initramfs
   - type: initramfs
