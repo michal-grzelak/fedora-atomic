@@ -8,7 +8,7 @@ modules:
         - SourceCodePro
         - Hack
         - Terminus
-        - ShareTechMono
+        - VictorMono
         - Monofur
         - Monaspace
         - MartianMono
@@ -22,6 +22,9 @@ modules:
         - Lilex
         - SpaceMono
         - AdwaitaMono
+        - NerdFontsSymbolsOnly
+        - iA-Writer
+        - Meslo
 
   - type: fonts
     fonts:
