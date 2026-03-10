@@ -45,5 +45,8 @@ jobs:
           # rechunks the image, allowing for smaller images and smaller updates; increases build time
           build_chunked_oci: true
 
+          # ! TODO: TEMP fix
+          rechunk_clear_plan: true
+
           # make use of layer cache by pushing the layers to the registry.
           use_cache: true
