@@ -1,0 +1,20 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+# make podman a default
+modules:
+  - type: systemd
+    system:
+      disabled:
+        - docker.socket
+        - docker.service
+        - podman.socket
+
+  - type: systemd
+    user:
+      enabled:
+        - podman.socket
+
+  - type: dnf
+    install:
+      packages:
+        - podman-docker
