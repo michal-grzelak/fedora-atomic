@@ -6,3 +6,9 @@ modules:
     brew-analytics: false
     update-interval: 1d
     upgrade-interval: 1d
+
+  # remove default completions
+  - type: script
+    snippets:
+      - "rm /usr/share/fish/vendor_conf.d/brew-fish-completions.fish"
+      - "rm /usr/share/fish/vendor_conf.d/ublue-brew.fish"
