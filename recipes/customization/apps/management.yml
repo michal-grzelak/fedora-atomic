@@ -18,6 +18,3 @@ modules:
           - io.github.flattool.Ignition
           # DistroShelf
           - com.ranfdev.DistroShelf
-  - type: script
-    scripts:
-      - install-toolhive.sh
