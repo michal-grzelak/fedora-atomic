@@ -3,6 +3,9 @@
 modules:
   - type: fonts
     fonts:
+      google-fonts:
+        - Noto Emoji
+        - Noto Color Emoji
       nerd-fonts:
         - FiraCode
         - SourceCodePro
