@@ -4,9 +4,16 @@ set -ouex pipefail
 
 echo "Installing ToolHive for Linux"
 
-# get latest rpm url
-URL=$(curl -s https://api.github.com/repos/stacklok/toolhive-studio/releases/latest \
-    | jq -r '.assets[] | select(.name | test("x86_64.rpm")) | .browser_download_url')
+# create temp dir
+TMP_DIR=$(mktemp -d)
+cd "$TMP_DIR"
 
-# install with dnf5
-dnf5 install -y "$URL"
+# download tarball binary
+curl -L https://github.com/stacklok/toolhive-studio/releases/latest/download/toolhive-studio-linux-x64.tar.gz | tar -xz
+
+# install toolhive
+install -m 755 toolhive-studio-linux-x64/ToolHive /usr/bin/ToolHive
+
+# cleanup
+cd /
+rm -rf "$TMP_DIR"
