@@ -43,7 +43,7 @@ jobs:
           maximize_build_space: true
 
           # rechunks the image, allowing for smaller images and smaller updates; increases build time
-          build_chunked_oci: true
+          build_chunked_oci: false
 
           # make use of layer cache by pushing the layers to the registry.
           use_cache: true
