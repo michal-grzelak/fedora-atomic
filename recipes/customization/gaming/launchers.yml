@@ -10,12 +10,9 @@ modules:
         install:
           # Steam
           - com.valvesoftware.Steam
+          # Lutris
+          - net.lutris.Lutris
           # Heroic Games Launcher
           - com.heroicgameslauncher.hgl
           # Faugus
           - io.github.Faugus.faugus-launcher
-
-  - type: dnf
-    install:
-      packages:
-        - lutris
