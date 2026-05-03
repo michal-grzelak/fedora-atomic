@@ -4,6 +4,9 @@ modules:
   # amd packages
   - from-file: hardware/amd-gpu.yml
 
+  # canon printer drivers
+  - from-file: hardware/canon-printer.yml
+
   # dev packages
   - from-file: common/dev-base.yml
 
