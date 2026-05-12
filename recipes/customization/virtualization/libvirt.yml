@@ -18,7 +18,7 @@ modules:
       cleanup: true
       copr:
         - name: ublue-os/packages
-          chroot: fedora-43-x86_64
+          chroot: fedora-44-x86_64
     install:
       packages:
         - ublue-os-libvirt-workarounds
