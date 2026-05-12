@@ -1,8 +1,6 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 modules:
-  - from-file: customization/gaming/launchers-common.yml
-
   - type: default-flatpaks
     configurations:
       - notify: false
@@ -10,7 +8,7 @@ modules:
         repo:
           title: Flathub (user)
         install:
-          # Steam
-          - com.valvesoftware.Steam
-          # Lutris
-          - net.lutris.Lutris
+          # Heroic Games Launcher
+          - com.heroicgameslauncher.hgl
+          # Faugus
+          - io.github.Faugus.faugus-launcher

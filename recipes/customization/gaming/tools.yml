@@ -18,8 +18,6 @@ modules:
 
           # ProtonUp-Qt - GUI for managing Proton versions
           - net.davidotek.pupgui2
-          # Proton-GE - Custom Proton compatibility tool for Steam
-          - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 
           # Ludusavi - Game save manager
           - com.github.mtkennerly.ludusavi
