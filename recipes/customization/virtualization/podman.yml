@@ -16,6 +16,16 @@ modules:
       enabled:
         - podman.socket
 
+  - type: dnf
+    remove:
+      packages:
+        - docker-ce
+        - docker-ce-cli
+      auto-remove: true
+    install:
+      packages:
+        - podman-docker
+
   # link docker to podman for compatibility
   - type: files
     files:
