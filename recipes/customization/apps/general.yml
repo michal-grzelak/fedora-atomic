@@ -6,7 +6,9 @@ modules:
       - notify: false
         scope: system
         repo:
-          title: Flathub (system)
+          title: Flathub (managed)
         install:
-          # LACT - configure and monitor AMD, Nvidia or Intel GPU
-          - io.github.ilya_zlobintsev.LACT
+          # qBittorrent
+          - org.qbittorrent.qBittorrent
+          # Stremio
+          - com.stremio.Stremio

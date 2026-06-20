@@ -4,7 +4,7 @@ modules:
   - type: default-flatpaks
     configurations:
       - notify: false
-        scope: user
+        scope: system
         repo:
           title: Flathub (system)
         install:
@@ -18,3 +18,5 @@ modules:
           - io.github.flattool.Ignition
           # DistroShelf
           - com.ranfdev.DistroShelf
+          # MissionCenter - resource monitor
+          - io.missioncenter.MissionCenter

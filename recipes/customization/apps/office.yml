@@ -4,9 +4,20 @@ modules:
   - type: default-flatpaks
     configurations:
       - notify: false
-        scope: user
+        scope: system
         repo:
-          title: Flathub (system)
+          title: Flathub (managed)
         install:
-          # LibreOffice - office suite
-          - org.libreoffice.LibreOffice
+          # office suite
+          # - org.libreoffice.LibreOffice
+          - org.onlyoffice.desktopeditors
+          # Okular - pdf reader
+          - org.kde.okular
+          # Skanpage - scanner
+          - org.kde.skanpage
+          # Gwenview - photo viewer
+          - org.kde.gwenview
+          # VLC - video player
+          - org.videolan.VLC
+          # Calculator
+          - org.gnome.Calculator
