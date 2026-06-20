@@ -22,8 +22,8 @@ This is a custom Fedora Atomic OS image built with BlueBuild.
 
 All YAML files follow BlueBuild schemas. Reference these for structure and conventions:
 
-- Recipe: `https://schema.blue-build.org/recipe-v1.json`
-- Modules: `https://schema.blue-build.org/module-stage-list-v1.json`
+- Recipe: `https://schema.blue-build.org/recipe-v2.json`
+- Modules: `https://schema.blue-build.org/module-list-v1.json`
 
 Use ONLY those schemas as others are nested specific ones.
 
@@ -33,16 +33,19 @@ This project has **no local build/test commands** - images are built via GitHub 
 
 **Local validation:**
 
-- Validate YAML syntax against BlueBuild schemas using `check-jsonschema <yaml_file> --schemafile <schema_in_yaml_file> --base-uri https://schema.blue-build.org`
+- Validate v1 recipes/modules with `bluebuild validate <yaml_file>`
   - <yaml_file> is any yaml file that is either recipe or module
-  - <schema_in_yaml_file> is a schema defined in a file in a comment tag `# yaml-language-server: $schema=`
   - All yaml files MUST pass schema validation
-- Use `bluebuild` CLI if installed: `bluebuild build recipes/recipe-bazzite.yml`
+- For v2 recipes (uses `recipe-v2.json` schema), `bluebuild validate` does NOT support v2 — use instead:
+  `check-jsonschema <file> --schemafile https://schema.blue-build.org/recipe-v2.json --base-uri https://schema.blue-build.org`
+  - `--schemafile` points to the v2 JSON schema URL
+  - `--base-uri` enables `$ref` resolution for schema sub-references
+  - Verified that it correctly validates v2 structure and rejects invalid ones
 
 **CI/CD:**
 
 - Builds trigger automatically on push to main
-- Images published to: `ghcr.io/michal-grzelak/bazzite-custom-dx`
+- Images published to: `ghcr.io/<user>/<name>`
 
 ## Code Style Guidelines
 
