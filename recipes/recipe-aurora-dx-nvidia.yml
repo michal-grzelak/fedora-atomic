@@ -1,18 +1,15 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v2.json
-version: 2
-spec:
-  platforms:
-    - linux/amd64/v2
-base:
-  image: ghcr.io/ublue-os/aurora-dx-nvidia-open:stable
-metadata:
-  # image will be published to ghcr.io/<user>/<name>
-  name: aurora-dx-nvidia
-  # description will be included in the image's metadata
-  description: Personalized Aurora-DX image.
-  tags:
-    - stable
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: aurora-dx-nvidia
+# description will be included in the image's metadata
+description: Personalized Aurora-DX image.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/aurora-dx-nvidia-open
+image-version: stable
+alt-tags:
+  - stable
 
 modules:
   - from-file: common-nvidia.yml

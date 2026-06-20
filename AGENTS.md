@@ -33,14 +33,9 @@ This project has **no local build/test commands** - images are built via GitHub 
 
 **Local validation:**
 
-- Validate v1 recipes/modules with `bluebuild validate <yaml_file>`
+- Validate YAML syntax against BlueBuild schemas using `bluebuild validate <yaml_file>`
   - <yaml_file> is any yaml file that is either recipe or module
   - All yaml files MUST pass schema validation
-- For v2 recipes (uses `recipe-v2.json` schema), `bluebuild validate` does NOT support v2 — use instead:
-  `check-jsonschema <file> --schemafile https://schema.blue-build.org/recipe-v2.json --base-uri https://schema.blue-build.org`
-  - `--schemafile` points to the v2 JSON schema URL
-  - `--base-uri` enables `$ref` resolution for schema sub-references
-  - Verified that it correctly validates v2 structure and rejects invalid ones
 
 **CI/CD:**
 
