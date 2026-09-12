@@ -71,20 +71,24 @@ BROWSER_SUPPORT_PATH="/opt/1Password/1Password-BrowserSupport"
 
 
 # Add .desktop file and icons
-if [ -d /usr/share/applications ]; then
-  # xdg-desktop-menu will only be available if xdg-utils is installed, which is likely but not guaranteed
-  if command -v xdg-desktop-menu >/dev/null 2>&1; then
-    xdg-desktop-menu install --mode system --novendor /opt/1Password/resources/1password.desktop
-    xdg-desktop-menu forceupdate
-  else
-    install -m0644 /opt/1Password/resources/1password.desktop /usr/share/applications
-  fi
-fi
-if [ -d /usr/share/icons ]; then
-  cp -rf /opt/1Password/resources/icons/* /usr/share/icons/
-  # Update icon cache
-  gtk-update-icon-cache -f -t /usr/share/icons/hicolor/
-fi
+# if [ -d /usr/share/applications ]; then
+#   # xdg-desktop-menu will only be available if xdg-utils is installed, which is likely but not guaranteed
+#   if command -v xdg-desktop-menu >/dev/null 2>&1; then
+#     xdg-desktop-menu install --mode system --novendor /opt/1Password/resources/1password.desktop
+#     xdg-desktop-menu forceupdate
+#   else
+#     install -m0644 /opt/1Password/resources/1password.desktop /usr/share/applications
+#   fi
+# fi
+
+# if [ -d /usr/share/icons ]; then
+#   cp -rf /opt/1Password/resources/icons/* /usr/share/icons/
+#   # Update icon cache
+#   gtk-update-icon-cache -f -t /usr/share/icons/hicolor/
+# fi
+
+xdg-desktop-menu forceupdate
+gtk-update-icon-cache -f -t /usr/share/icons/hicolor/
 
 # remove the sysusers.d entries created by onepassword RPMs.
 # They don't magically set the GID like we need them to.
