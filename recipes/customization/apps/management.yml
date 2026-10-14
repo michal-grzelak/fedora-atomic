@@ -6,7 +6,7 @@ modules:
       - notify: false
         scope: system
         repo:
-          title: Flathub (system)
+          title: Flathub
         install:
           # Gear Lever - AppImage management GUI
           - it.mijorus.gearlever

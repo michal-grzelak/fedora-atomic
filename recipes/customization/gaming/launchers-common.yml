@@ -6,7 +6,7 @@ modules:
       - notify: false
         scope: system
         repo:
-          title: Flathub (user)
+          title: Flathub
         install:
           # Heroic Games Launcher
           - com.heroicgameslauncher.hgl

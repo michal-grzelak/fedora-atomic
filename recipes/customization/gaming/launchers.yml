@@ -8,7 +8,7 @@ modules:
       - notify: false
         scope: system
         repo:
-          title: Flathub (user)
+          title: Flathub
         install:
           # Steam
           - com.valvesoftware.Steam

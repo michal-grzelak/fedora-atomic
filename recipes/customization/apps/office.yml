@@ -6,7 +6,7 @@ modules:
       - notify: false
         scope: system
         repo:
-          title: Flathub (managed)
+          title: Flathub
         install:
           # office suite
           # - org.libreoffice.LibreOffice

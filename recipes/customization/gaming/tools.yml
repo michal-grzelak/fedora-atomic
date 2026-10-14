@@ -6,7 +6,7 @@ modules:
       - notify: false
         scope: system
         repo:
-          title: Flathub (user)
+          title: Flathub
         install:
           # MangoHud - Vulkan/OpenGL performance overlay
           # ! TODO: doesn't have dynamic latest version, only fixed, install manually; check if later it has some latest tag
